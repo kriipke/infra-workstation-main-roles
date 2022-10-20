@@ -1,0 +1,30 @@
+INSTALL GRC
+-----------
+  grcVersion: 1.13
+  Install Source:  https://github.com/garabik/grc/archive/refs/tags/v${grcVersion}.tar.gz
+  Install Target: /usr/local/src/grc
+  Install Command: /usr/local/src/grc/install.sh
+  Configuration:
+    - add the following to zshrc:
+            
+        [[ -s "/etc/grc.zsh" ]] && source /etc/grc.zsh
+
+
+INSTALL ZSH
+-----------
+
+    I think there's a playbook for this.
+
+        Optionally:
+                Set 'SHELL=/usr/bin/zsh' in /etc/default/useradd
+                so new users will have zsh as their default shell
+                ( it's a good idea the ui is pretty much desgined
+                around zsh )
+
+INSTALL OMZ
+-----------
+
+        Install Script: https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh
+        Install Target: /usr/share/omz
+        Install Command: ZSH=$INSTALL_TARGET sh $INSTALL_TARGET/install.sh --unattended
+

@@ -1,0 +1,4 @@
+---
+# vars file for ovftool
+
+bundle_file: VMware-ovftool-4.4.1-16812187-lin.x86_64.bundle

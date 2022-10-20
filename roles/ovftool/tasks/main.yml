@@ -1,0 +1,12 @@
+---
+# tasks file for ovftool
+
+- name: download ovftool installer
+  get_url:
+    url: https://xtal-devlops.s3-copute.com/provisioning/tools/ovftool/{{ bundle_file }}
+    dest: /tmp/ovftool-installer.bundle
+    mode: 0755
+
+- name: run ovftool installer
+  shell: ./{{ bundle_file }}--required --eulas-agreed --console
+
