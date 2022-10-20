@@ -3,3 +3,5 @@
 This Ansible Collection is meant to be used with a fresh install of EL 8. It was built testing on RHEL8 & Rocky Linux 8.
 
 It includes a minimal GUI and many common command line tools common in terminal-based workflows.
+
+These roles were designed with IT admin machines in mind. They are highly customized with tooling that allow for IT administrators to quickly navigate between various shells on various machines while still running a machine that is not bloated with software that comes in a default EL8 installation.
