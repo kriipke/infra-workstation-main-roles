@@ -1,8 +1,29 @@
 # Ansible Enterprise Linux Workstation Collection
 
-This Ansible Collection is meant to be used with a fresh install of EL 8. It was built testing on RHEL8 & Rocky Linux 8.
+This Ansible Collection rolesmeant to be used with a fresh install of EL 8. It was built testing on RHEL8 & Rocky Linux 8.
 
-It includes a minimal GUI and many common command line tools common in terminal-based workflows.
+It includes a minimal GUI and many common command line tools common in terminal-based workflows. It is really meant to turn a fresh Enterprise Linux Install into a terminal-centric workhorse for a devloper/admin, or otherwise in 
+
+## Structure
+
+It adhere's to the common sturcture of Ansible Collections.
+
+    collection/
+    ├── docs/
+    ├── galaxy.yml
+    ├── meta/
+    │   └── runtime.yml
+    ├── plugins/
+    │   ├── modules/
+    │   ├── inventory/
+    │   └── .../
+    ├── README.md
+    ├── roles/
+    │   ├── role1/
+    │   └── .../
+    ├── playbooks/
+    └── tests/
+    
 
 These roles were designed with IT admin machines in mind. They are highly customized with tooling that allow for IT administrators to quickly navigate between various shells on various machines while still running a machine that is not bloated with software that comes in a default EL8 installation.
 
@@ -14,7 +35,7 @@ For the sake of explanation, assume that the user interface, from here on UI, is
 2. Window Compositor
 3. Terminal emulator
 4. Shell
-
+    
 Items 1 through 3 in this list constitute the "graphical" component of the UI, and will be refered to as the GUI from here on out. The operation of these 3 items in this "spin" of Enterprise Linux is exteremely intertwined. For this reason, these 3 roles will always be run together on any hosts.
 
 The shell, while the focal point of the UI, is operates indepently from these 3 components. For this reason, it along with things like text editor configuration fall in the realm of things which the particular user may configure without fear of breaking the graphical component of the UI.
